@@ -1,0 +1,37 @@
+version: "3"
+services:
+  backend:
+    image: "fx-deals-warehouse:v1"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/fx-deals-warehouse?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+    networks:
+      - springapimysql-net
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: fx-deals-warehouse
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - springapimysql-net
+
+networks:
+  springapimysql-net:
+    driver: bridge
+
+volumes:
+  mysql_data:

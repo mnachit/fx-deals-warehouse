@@ -1,6 +1,6 @@
 # Server Configuration
 server:
-  port: 8070
+  port: 8001
   error:
     include-message: always
     include-binding-errors: always

@@ -4,10 +4,10 @@ This project is a Java-based application designed to process and store foreign e
 
 ## API Endpoint
 
-- **Endpoint**:  
-  **[POST]** `http://localhost:8001/api/api/deal`
-  **[GET]** `http://localhost:8001/api/api/dea/{id}`
-  **[GET]** `http://localhost:8001/api/api/deals`
+- **Endpoint**:
+   **[POST]** `http://localhost:8001/api/api/deal`
+   **[GET]** `http://localhost:8001/api/api/dea/{id}`
+   **[GET]** `http://localhost:8001/api/api/deals`
 
 - **Request JSON Example**:
 

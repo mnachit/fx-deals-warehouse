@@ -4,17 +4,20 @@ This project is a Java-based application designed to process and store foreign e
 
 ## API Endpoint
 
-- **Endpoint:
-      - **[POST] http://localhost:8082/api/FXDeals
-- **Request JSON Example:
+- **Endpoint**:  
+  **[POST]** `http://localhost:8001/api/api/deal`
+  **[GET]** `http://localhost:8001/api/api/dea/{id}`
+  **[GET]** `http://localhost:8001/api/api/deals`
 
-      ```json
-{
-    "fromCurrency": "USD",
-    "toCurrency": "EUR",
-    "dealTimestamp": "2024-01-19T14:30:00",
-    "dealAmount": 1000.50
-}
+- **Request JSON Example**:
+
+  ```json
+  {
+      "fromCurrency": "USD",
+      "toCurrency": "EUR",
+      "dealTimestamp": "2024-01-19T14:30:00",
+      "dealAmount": 1000.50
+  }
 
 
 ## Features

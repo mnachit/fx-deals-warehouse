@@ -2,6 +2,21 @@
 
 This project is a Java-based application designed to process and store foreign exchange (FX) deal data for a data warehouse. Developed as part of a technical assignment, it ensures robust data validation, unique record handling, and seamless database integration while adhering to modern development best practices.
 
+## API Endpoint
+
+- **Endpoint:
+      - **[POST] http://localhost:8082/api/FXDeals
+- **Request JSON Example:
+
+      ```json
+{
+    "fromCurrency": "USD",
+    "toCurrency": "EUR",
+    "dealTimestamp": "2024-01-19T14:30:00",
+    "dealAmount": 1000.50
+}
+
+
 ## Features
 
 - **Database Support**: Utilized MySQL for data persistence.
